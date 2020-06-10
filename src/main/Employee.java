@@ -11,7 +11,7 @@
 */
 package main;
 
-public class Employee {
+public abstract class Employee {
     String name;
     int age;
     String designation;
@@ -33,9 +33,10 @@ public class Employee {
     }
     
     //set salary value
-    public void empSalary(double empSalary) {
+    protected void empSalary(double empSalary) {
         salary = empSalary;
     }
+    
     
     //print message
     public void printEmployee() {
@@ -44,6 +45,9 @@ public class Employee {
         System.out.println("职位:" + designation);
         System.out.println("薪水:" + salary);
     }
+    
+    //自定义扩展方法
+    public abstract void custom ();
     
 }
 
